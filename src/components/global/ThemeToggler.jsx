@@ -7,11 +7,11 @@ export default function ThemeToggler({ className = "" }) {
   const darkMode = useDarkMode(false, {
     classNameDark: "dark",
     classNameLight: "light",
-    storageKey: "darkMode", // klíč pro uložení do localstorage - pokud mají dva weby stejný klíč budou sdílet i preferenci dark modu
+    storageKey: "uctoDarkMode", // klíč pro uložení do localstorage - pokud mají dva weby stejný klíč budou sdílet i preferenci dark modu
   });
 
   return (
-    <div className={`theme-toggler ${className}`}>
+    <div className={`theme-toggler a11y-focus ${className}`}>
       <input
         type="checkbox"
         checked={darkMode.value}

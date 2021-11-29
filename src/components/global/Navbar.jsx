@@ -4,13 +4,13 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 // Hooks & utils
 import useScrollListener from "../../hooks/useScrollListener";
 import { isBrowser } from "../../hooks/utils/isBrowser";
 
 // Components
-import SocialIcons from "./SocialIcons";
 import ThemeToggler from "./ThemeToggler";
 
 // Logo značky
@@ -20,19 +20,27 @@ export default function Navbar() {
   // Generované odkazy (upravit zde)
   const navLinks = [
     {
-      path: "/",
-      title: "Domů",
+      path: "/#o-nas",
+      title: "O nás",
     },
     {
-      path: "/revealui",
-      title: "Reveal UI",
+      path: "/#sluzby",
+      title: "Služby",
     },
     {
-      path: "/react",
-      title: "React",
+      path: "/#klienti",
+      title: "Klienti",
     },
     {
-      path: "/contact",
+      path: "/#software",
+      title: "Software",
+    },
+    {
+      path: "/#nas-tym",
+      title: "Náš tým",
+    },
+    {
+      path: "/#kontakt",
       title: "Kontakt",
     },
   ];
@@ -89,34 +97,42 @@ export default function Navbar() {
       {/* Vnitřní wrapper -> vnitřní šířku lze změnit přepsáním velikosti wrapperu zde */}
       <div className="ui-wrapper-lg h-full flex justify-between items-center">
         {/* Logo navigace */}
-        <Link to="/" onClick={menuClose} className="mr-auto w-24 h-10 z-10">
+        <Link
+          to="/"
+          onClick={menuClose}
+          className="mr-auto lg:mr-10 xl:mr-16 w-12 h-12 z-10"
+        >
           <img
             src={brand}
             alt="Logo značky"
-            width="96"
-            height="40"
-            className="w-full h-full dark:filter dark:invert"
+            width="48"
+            height="48"
+            className="w-full h-full"
           />
         </Link>
 
         {/* Hlavní linky desktop navigace */}
-        <ul className="text-sm uppercase space-x-8 xl:space-x-12 hidden lg:flex mr-6 xl:mr-10">
+        <ul className="text-sm uppercase space-x-8 xl:space-x-12 hidden lg:flex mr-auto">
           {navLinks.map((link) => (
             <li key={link.title}>
-              <Link to={link.path} className="ui-link-2 text-default-strong">
+              <AnchorLink
+                to={link.path}
+                stripHash
+                className="ui-link-2 text-default font-semibold"
+              >
                 {link.title}
-              </Link>
+              </AnchorLink>
             </li>
           ))}
         </ul>
 
-        <ThemeToggler className="mr-6 xl:mr-10" />
+        <ThemeToggler className="ml-auto mr-6 xl:mr-10" />
 
         <a
-          href="tel:+420737090913"
-          className="ui-link-3 text-h4 text-primary hidden lg:inline-flex self-center"
+          href="tel:+420373543481"
+          className="hidden lg:inline-flex border-2 border-gray-300 dark:border-gray-700 bg-gray-300 dark:bg-gray-700 bg-opacity-0 dark:bg-opacity-0 hover:bg-opacity-100 dark:hover:bg-opacity-100 px-5 py-2 transition-colors duration-default a11y-focus"
         >
-          +420 737 090 913
+          <span className="text-primary font-semibold">+420 373 543 481</span>
         </a>
 
         {/* Burger tlačítko -> viditelné pouze na tabletu a mobilu */}
@@ -148,35 +164,34 @@ export default function Navbar() {
           >
             {navLinks.map((link) => (
               <li key={link.title}>
-                <Link
+                <AnchorLink
                   to={link.path}
-                  onClick={menuClose}
-                  className="ui-link-2 text-default-strong font-bold"
+                  stripHash
+                  onAnchorLinkClick={menuClose}
+                  className="ui-link-2 text-default-strong text-lg font-bold"
                 >
                   {link.title}
-                </Link>
+                </AnchorLink>
               </li>
             ))}
 
             <li>
               <a
-                href="tel:+420737090913"
-                className="ui-link-3 mt-6 text-h4 sm:text-h3 text-primary font-semibold normal-case"
+                href="tel:+420373543481"
+                className="ui-link-3 mt-8 text-xl text-primary font-semibold normal-case"
               >
-                +420 737 090 913
+                +420 373 543 481
               </a>
             </li>
             <li>
               <a
-                href="mailto:info@reveal.cz"
-                className="ui-link-3 text-h4 sm:text-h3 text-primary font-semibold normal-case"
+                href="mailto:info@2pucto.cz"
+                className="ui-link-3 text-xl text-primary font-semibold normal-case"
               >
-                Info@reveal.cz
+                Info@2pucto.cz
               </a>
             </li>
           </ul>
-
-          <SocialIcons />
         </div>
       </div>
     </nav>

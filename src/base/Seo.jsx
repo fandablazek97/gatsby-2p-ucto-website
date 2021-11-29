@@ -8,7 +8,7 @@ export default function Seo({
   keywords = "",
   thumbnail = "",
 }) {
-  const siteName = "Reveal";
+  const siteName = "2P ÚČTO Plzeň";
 
   return (
     <Helmet>

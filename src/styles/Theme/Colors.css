@@ -6,8 +6,8 @@
  * -> Stránka na převody a skládání barevných palet: `https://coolors.co/` */
 
 :root {
-  --color-primary: 350, 92%, 52%;
-  --color-secondary: 218, 17%, 35%;
+  --color-primary: 229, 66%, 50%;
+  --color-secondary: 194, 85%, 62%;
 
   --color-default: 218, 17%, 35%; /* gray 600 */
   --color-default-strong: 230, 21%, 11%; /* gray 900 */

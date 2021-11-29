@@ -11,23 +11,19 @@ import CookiesPolicy from "../components/legal/CookiesPolicy";
 export default function cookiesPage() {
   return (
     <Layout>
-      <Seo
-        title="Hlavní stránka"
-        description="Template pro stránku zpracování osobních údajů. Pro vyplnění údajů klienta stačí přepsat / doplnit props u komponenty GdprText."
-        keywords=""
-      />
+      <Seo title="Zásady používání cookies" description="" keywords="" />
 
       {/* Main content */}
       <Hero title="Zásady používání cookies" />
 
       <div className="ui-wrapper-sm pt-6 pb-32">
         <CookiesPolicy
-          domain="reveal.cz"
-          ownerName="František Blažek"
-          adress="Honezovice 127, 333 01 Stod"
-          ico="06345204"
+          domain="2pucto.cz"
+          ownerName="společnost 2 P UCTO spol. s. r. o."
+          adress="K Jalovčí 210, 337 01 Ejpovice"
+          ico="25219413 "
           validTime="šest měsíců"
-          lastUpdate="10. 11. 2021"
+          lastUpdate="25. 11. 2021"
         />
       </div>
     </Layout>

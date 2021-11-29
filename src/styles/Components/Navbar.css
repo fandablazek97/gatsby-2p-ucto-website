@@ -43,9 +43,6 @@
   & .navbar__menu__list {
     animation: MenuItemsFadeDown 600ms ease 150ms forwards;
   }
-  & .social-icons {
-    animation: MenuItemsFadeDown 600ms ease 300ms forwards;
-  }
 }
 
 @keyframes MenuItemsFadeDown {
@@ -97,35 +94,3 @@
 }
 
 /* --- Konec hlavního stylu navigace --- */
-
-/*
- * -- Bílá navigace ve výchozí pozici (bez scrollu nahoře) --
- * -> Pokud má mít navigace ve světlém režimu bílé prvky (např při fotce v pozadí cover fotky webu)
- * -> Stačí přidat třídu `navbar--not-scrolled` do podmínečné třídy tagu nav (třída `navbar`)
- */
-
-/* Logo */
-.navbar--not-scrolled a img {
-  filter: invert(1);
-  mix-blend-mode: difference;
-}
-
-/* položky navigace */
-.navbar--not-scrolled ul li a:not(.navbar__menu li a) {
-  color: white !important;
-}
-
-/* Přepínač tmavého režimu */
-.navbar--not-scrolled .theme-toggler {
-  color: hsl(223, 16%, 83%) !important;
-  background-color: hsla(223, 16%, 83%, var(--tw-bg-opacity)) !important;
-}
-
-/* Burger menu */
-.navbar--not-scrolled .navbar__opener {
-  mix-blend-mode: difference;
-
-  & > div {
-    background-color: #fff;
-  }
-}

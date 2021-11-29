@@ -1,0 +1,45 @@
+.ui-button[variant="gastro-expand"] {
+  background-color: transparent;
+  border: 3px solid hsl(var(--color-background-200));
+  padding: calc(var(--button-py) - var(--button-border-width))
+    calc(var(--button-px) - var(--button-border-width));
+
+  /* Text */
+  & span {
+    color: hsl(var(--color-primary));
+  }
+
+  /* Icon */
+  & svg,
+  & i,
+  & [class^="icon-"] {
+    color: hsl(var(--color-primary));
+  }
+
+  /* Animated bg */
+  &::before {
+    will-change: transform, opacity;
+
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: -5%;
+    width: 110%;
+    height: 110%;
+    background-color: hsl(var(--color-background-200));
+    opacity: 0;
+    transform: scaleX(0) skew(-20deg);
+    transition: opacity var(--duration) ease,
+      transform calc(var(--duration) * 1.8) ease;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+
+  &:hover::before {
+    transform: scaleX(1.25) skew(-20deg);
+    opacity: 1;
+  }
+}

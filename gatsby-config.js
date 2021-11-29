@@ -1,10 +1,10 @@
 module.exports = {
   // Site Metadata
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "http://www.2pucto.cz",
     author: `@revealcz`,
-    title: "Gatsby Reveal UI",
-    description: `React starter se základním nastavením a komponenty pro rychlý start nového reveal projektu.`,
+    title: "2P Účto",
+    description: `Účetní firma v Plzni. Nabízíme komplexní a kvalitní služby v oblasti vedení účetnictví. Mzdové účetnictví, daňová evidence, komunikace s úřady a mnoho dalšího.`,
   },
 
   plugins: [
@@ -26,7 +26,7 @@ module.exports = {
       options: {
         classNameDark: "dark",
         classNameLight: "light",
-        storageKey: "darkMode",
+        storageKey: "uctoDarkMode",
         minify: true,
       },
     },
