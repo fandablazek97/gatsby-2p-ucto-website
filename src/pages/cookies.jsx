@@ -23,7 +23,7 @@ export default function cookiesPage() {
           adress="K Jalovčí 210, 337 01 Ejpovice"
           ico="25219413 "
           validTime="šest měsíců"
-          lastUpdate="25. 11. 2021"
+          lastUpdate="21. 2. 2022"
         />
       </div>
     </Layout>

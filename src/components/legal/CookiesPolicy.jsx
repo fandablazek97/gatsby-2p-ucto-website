@@ -59,26 +59,6 @@ export default function CookiesPolicy({
         přidali.
       </p>
 
-      <h3>Analytické a výkonnostní</h3>
-      <p>
-        Umožňují nám sledovat analytiku počítáním návštěv a provozních zdrojů,
-        abychom mohli měřit a zlepšovat výkon našeho webu. Mohou být nastaveny
-        námi nebo poskytovateli třetích stran (např. Google, Seznam, Adobe,
-        Vercel, atd.), aby nám pomohly zjistit, které stránky, příspěvky nebo
-        videa jsou nejvíce a nejméně populární a jak se návštěvníci na webových
-        stránkách pohybují.
-      </p>
-
-      <h3>Marketingové cookies</h3>
-      <p>
-        Jsou nastaveny službami sociálních médií (např. Facebook), které jsme
-        přidali na web, abychom vám umožnili sdílet náš obsah se svými přáteli a
-        sítěmi. Tyto soubory cookies jsou schopny sledovat váš prohlížeč na
-        jiných webových stránkách a sestavovat profil vašich zájmů. To může
-        ovlivnit obsah a zprávy, které vidíte na jiných webových stránkách,
-        které navštěvujete.
-      </p>
-
       <h2>Doba uchování souborů cookies</h2>
       <p>
         Doba, po kterou soubory cookies zůstanou ve vašem zařízení, se odvíjí od
